@@ -1,1 +1,24 @@
-# pokersquares
+# PokerSquares by Tim Trott
+
+This is an implementation of my old [Poker Squares game written in Delphi](https://github.com/timtrottcodes/pokersquares-delphi) way back in 2005. This modern version uses a web brower interface, [Phaser.io](https://phaser.io/) game framework and TypeScript backend.
+
+Playable online at [TimTrottCodes](https://timtrottcodes.github.io/).
+
+The original game of poker squares dates back to the late nineteenth century and was first documented as poker squares in the Hoyle series of card rule books in the early 1930s. Other card rule books have also documented the game, calling it 'poker squares', 'poker solitaire', or 'poker patience'.
+
+The deck is shuffled, and you draw 25 cards, one at a time, and place each card on the 5 by 5 grid, attempting to get the best possible poker hand for each row and column. In the Classic game, you may place a card on any unoccupied spot on the grid.
+
+When you're done you will have formed 10 poker hands: one for each row, one for each column. 
+
+You earn points based on the hands you have formed in each round. Cards can be in any order.
+
+## Running the Game
+
+Once you have cloned the repo, do: 
+
+```
+npm install
+npm run dev
+```
+
+And open the link in your browser.
