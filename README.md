@@ -22,3 +22,9 @@ npm run dev
 ```
 
 And open the link in your browser.
+
+## Assets
+
+* Card images from https://pixabay.com/vectors/ace-cards-club-diamond-heart-jack-159856/.
+* Other images genereted using Stable Diffusion.
+* Sound Effects by [freesound_community](https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=37691).

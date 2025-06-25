@@ -16,10 +16,10 @@ export default class GameScene extends Phaser.Scene {
     private nextCardImage?: Phaser.GameObjects.Image;
     private timerEvent?: Phaser.Time.TimerEvent;
     private cardBackImages: Phaser.GameObjects.Image[] = [];
-    private readonly cardWidth = 243;
-    private readonly cardHeight = 340;
+    private readonly cardWidth = 146;
+    private readonly cardHeight = 203;
     private readonly cardGutter = 10;
-    private readonly cardScale = 0.38;
+    private readonly cardScale = 0.66;
 
 
     constructor() {
@@ -28,6 +28,8 @@ export default class GameScene extends Phaser.Scene {
 
     preload() {
         this.load.image('back', 'assets/cards/back_light.png');
+        this.load.audio('cardsound32562-37691', 'assets/sfx/cardsound32562-37691.mp3')
+        this.load.audio('shuffle-cards-46455', 'assets/sfx/shuffle-cards-46455.mp3')
 
         const suits = ['clubs', 'diamonds', 'hearts', 'spades'];
         const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
@@ -45,6 +47,7 @@ export default class GameScene extends Phaser.Scene {
         
         this.handInfoTexts = [];
         this.deck = createDeck();
+        this.sound.play('shuffle-cards-46455');
         Phaser.Utils.Array.Shuffle(this.deck);
         this.grid = Array.from({ length: this.gridSize }, () => Array(this.gridSize).fill(null));
         this.cardSprites = Array.from({ length: this.gridSize }, () => Array(this.gridSize).fill(null as any));
@@ -148,6 +151,7 @@ drawNextCard() {
             ease: 'Bounce',
             onComplete: () => {
                 image.setTexture(cardKey);
+                this.sound.play('cardsound32562-37691');
                 this.tweens.add({
                     targets: image,
                     scaleX: this.cardScale,
