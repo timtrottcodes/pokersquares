@@ -2,7 +2,7 @@
 
 This is an implementation of my old [Poker Squares game written in Delphi](https://github.com/timtrottcodes/pokersquares-delphi) way back in 2005. This modern version uses a web brower interface, [Phaser.io](https://phaser.io/) game framework and TypeScript backend.
 
-Playable online at [TimTrottCodes](https://timtrottcodes.github.io/).
+Playable online at [TimTrottCodes](https://timtrottcodes.pages.dev/).
 
 The original game of poker squares dates back to the late nineteenth century and was first documented as poker squares in the Hoyle series of card rule books in the early 1930s. Other card rule books have also documented the game, calling it 'poker squares', 'poker solitaire', or 'poker patience'.
 
